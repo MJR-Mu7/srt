@@ -5,7 +5,7 @@ local NAME = "SRT-dev"
 local srt_dev = Proto(NAME, "SRT-dev Protocol")
 
 -- create a preference of a Protocol
-srt_dev.prefs["srt_udp_port"] = Pref.uint("SRT UDP Port", 1935, "SRT UDP Port")
+srt_dev.prefs["srt_udp_port"] = Pref.uint("SRT UDP Port", 1936, "SRT UDP Port")
 
 -- create fields of srt_dev
 -- Base.HEX, Base.DEC, Base.OCT, Base.UNIT_STRING, Base.NONE
@@ -909,7 +909,7 @@ function srt_dev.dissector (tvb, pinfo, tree)
 end
 
 -- Add the protocol into udp table
-local port = 1935
+local port = 1936
 
 local function enable_dissector()
 	DissectorTable.get("udp.port"):add(port, srt_dev)
